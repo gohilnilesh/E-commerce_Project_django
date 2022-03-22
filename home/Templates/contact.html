@@ -1,205 +1,9 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Tasnm || Contact</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends 'common.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
 
-        <!-- favicon
-		============================================ -->		
-        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-		<!-- google fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
-		<!-- all css here -->
-		<!-- bootstrap v3.3.6 css -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-		<!-- animate css -->
-        <link rel="stylesheet" href="css/animate.css">
-		<!-- pe-icon-7-stroke -->
-		<link rel="stylesheet" href="css/pe-icon-7-stroke.min.css">
-		<!-- jquery-ui.min css -->
-        <link rel="stylesheet" href="css/jquery-ui.min.css">
-        <!-- Image Zoom CSS
-		============================================ -->
-        <link rel="stylesheet" href="css/img-zoom/jquery.simpleLens.css">
-		<!-- meanmenu css -->
-        <link rel="stylesheet" href="css/meanmenu.min.css">
-		<!-- nivo slider CSS
-		============================================ -->
-		<link rel="stylesheet" href="lib/css/nivo-slider.css" type="text/css" />
-		<link rel="stylesheet" href="lib/css/preview.css" type="text/css" media="screen" />
-		<!-- owl.carousel css -->
-        <link rel="stylesheet" href="css/owl.carousel.css">
-		<!-- font-awesome css -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-		<!-- style css -->
-		<link rel="stylesheet" href="style.css">
-		<!-- responsive css -->
-        <link rel="stylesheet" href="css/responsive.css">
-		<!-- modernizr css -->
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-        <!-- header section start -->
-		<header class="pages-header">
-            <div class="header-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-4">
-                            <div class="left-header clearfix">
-                                <ul>
-                                    <li><p><i class="fa fa-phone" aria-hidden="true"></i>(+880) 1910 000251</p></li>
-                                    <li class="hd-none"><p><i class="fa fa-clock-o" aria-hidden="true"></i>Mon-fri : 9:00-19:00</p></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-8">
-                            <div class="right-header">
-                                <ul>
-                                    <li><a href="my-account.html"><i class="fa fa-user"></i>My account</a></li>
-                                    <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>My cart</a></li>
-                                    <li><a href="wishlist.html"><i class="fa fa-heart"></i>My wishlist</a></li>
-                                    <li><a href="checkout.html"><i class="fa fa-usd"></i>Creck out</a></li>
-                                    <li><a href="login.html"><i class="fa fa-lock"></i>Login</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-bottom" id="sticky-menu">
-                <div class="container relative">
-                    <div class="row">
-                        <div class="col-sm-2 col-md-2 col-xs-4">
-                            <div class="logo">
-                                <a href="index.html"><img src="img/logo2.png" alt="" /></a>
-                            </div>
-                        </div>
-                        <div class="col-sm-10 col-md-10 col-xs-8 static">
-                            <div class="all-manu-area">
-                                <div class="mainmenu clearfix hidden-sm hidden-xs">
-                                    <nav>
-                                        <ul>
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="shop.html">Lookbook</a></li>
-                                            <li><a href="blog.html">Blog</a> </li>
-                                            <li><a href="#">Pages</a>
-                                                <ul>
-                                                    <li><a href="about-us.html">About</a></li>
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                    <li><a href="contact.html">Contact</a></li>
-                                                    <li><a href="login.html">Login</a></li>
-                                                    <li><a href="my-account.html">My Account</a></li>
-                                                    <li><a href="shop.html">shop</a></li>
-                                                    <li><a href="shopping-cart.html">Shopping-Cart</a></li>
-                                                    <li><a href="single-product.html">Single Product</a></li>
-                                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <!-- mobile menu start -->
-                                <div class="mobile-menu-area hidden-lg hidden-md">
-                                    <div class="mobile-menu">
-                                        <nav id="dropdown">
-                                            <ul>
-                                                <li><a href="index.html">Home</a>
-                                                    <ul>
-                                                        <li><a href="index.html">Home Version One</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="shop.html">Shop</a></li>
-                                                <li><a href="shop.html">Lookbook</a></li>
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="#">Pages</a>
-                                                    <ul>
-                                                        <li><a href="about-us.html">About</a></li>
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                        <li><a href="contact.html">Contact</a></li>
-                                                        <li><a href="login.html">Login</a></li>
-                                                        <li><a href="my-account.html">My Account</a></li>
-                                                        <li><a href="shop.html">shop</a></li>
-                                                        <li><a href="shopping-cart.html">Shopping-Cart</a></li>
-                                                        <li><a href="single-product.html">Single Product</a></li>
-                                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                                <!-- mobile menu end -->
-                                <div class="right-header re-right-header">
-                                    <ul>
-                                        <li class="re-icon tnm"><i class="fa fa-search" aria-hidden="true"></i>
-                                            <form method="get" id="searchform" action="#">
-                                                <input type="text" value="" name="s" id="ws" placeholder="Search product..." />
-                                                <button type="submit"><i class="pe-7s-search"></i></button>
-                                            </form>
-                                        </li>
-                                        <li><a href="cart.html"><i class="fa fa-shopping-cart"></i><span class="color1">2</span></a>
-                                            <ul class="drop-cart">
-                                                <li>
-                                                    <a href="cart.html"><img src="img/cart/1.png" alt="" /></a>
-                                                    <div class="add-cart-text">
-                                                        <p><a href="#">White Shirt</a></p>
-                                                        <p>$50.00</p>
-                                                        <span>Color : Blue</span>
-                                                        <span>Size   : SL</span>
-                                                    </div>
-                                                    <div class="pro-close">
-                                                        <i class="pe-7s-close"></i>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <a href="cart.html"><img src="img/cart/2.png" alt="" /></a>
-                                                    <div class="add-cart-text">
-                                                        <p><a href="#">White Shirt</a></p>
-                                                        <p>$50.00 x 2</p>
-                                                        <span>Color : Blue</span>
-                                                        <span>Size   : SL</span>
-                                                    </div>
-                                                    <div class="pro-close">
-                                                        <i class="pe-7s-close"></i>
-                                                    </div>
-                                                </li>
-                                                <li class="total-amount clearfix">
-                                                    <span class="floatleft">total</span>
-                                                    <span class="floatright"><strong>= $150.00</strong></span>
-                                                </li>
-                                                <li>
-                                                    <div class="goto text-center">
-                                                        <a href="cart.html"><strong>go to cart &nbsp;<i class="pe-7s-angle-right"></i></strong></a>
-                                                    </div>
-                                                </li>
-                                                <li class="checkout-btn text-center">
-                                                    <a href="checkout.html">Check out</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- header section end -->
         <!-- pages-title-start -->
 		<section class="contact-img-area">
             <div class="container">
@@ -207,7 +11,7 @@
                     <div class="col-md-12 text-center">
                         <div class="con-text">
                             <h2 class="page-title">Contact</h2>
-                            <p><a href="#">Home</a> | Contact</p>
+                            <p><a href="">Home</a> | Contact</p>
                         </div>
                     </div>
                 </div>
@@ -217,7 +21,7 @@
 		<!-- contact content section start -->
 		<section class="top-map-area">
             <div class="container">
-                <div class="row">
+				<div class="row">
                     <div class="col-md-12">
                         <div class="map-area">
                             <div class="contact-map">
@@ -226,6 +30,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="page-title">
@@ -236,14 +41,14 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <strong>http://tt_cendo.com/</strong>
+                                        <strong>http:apparel/contact-us/</strong>
                                         <br>
-                                        <address> Address: 123 Main Street, Anytown,CA 12345 USA. </address>
+                                        <address> Address: Gandhinagar,sector-28 </address>
                                     </div>
                                     <div class="col-sm-3">
                                         <strong>Telephone</strong>
                                         <br>
-                                        (800) 0123 456 789
+                                        + 6767439291
                                         <br>
                                     </div>
                                 </div>
@@ -253,34 +58,40 @@
                             <div class="col-md-12">
                                 <h3>Contact Form</h3>
                             </div>
-                            <form class="cendo" action="mail.php" method="post">
-                                
-                                <div class="form-group required">
-                                    <label class="col-md-2 control-label">Your Name</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" value="" name="name">
-                                    </div>
-                                </div>
-                                <div class="form-group required">
-                                    <label class="col-md-2 control-label">E-Mail Address</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" value="" name="email">
-                                    </div>
-                                </div>
-                                <div class="form-group required">
-                                    <label class="col-md-2 control-label">Enquiry</label>
-                                    <div class="col-md-10">
-                                        <textarea class="form-control" rows="10" name="message"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="buttons">
-                                        <div class="pull-right">
-                                            <input class="btn btn-primary" type="submit" value="Submit">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                            <form  id="contact_form" method="post"> {% csrf_token %}
+								<!--     {{ form | crispy }}-->
+																<div class="form-group required" style="margin-bottom: 5px">
+																	<label class="col-md-2 control-label">Your Name</label>
+																	<div class="col-md-10">
+																		<input class="form-control" style="margin-bottom: 5px" type="text" value="" name="name" placeholder="your name here...">
+																	</div>
+																</div>
+																<div class="form-group required">
+																	<label class="col-md-2 control-label">E-Mail Address</label>
+																	<div class="col-md-10">
+																		<input class="form-control" style="margin-bottom: 5px" type="email" value="" name="email" placeholder="your email here...">
+																	</div>
+																</div>
+																<div class="form-group required">
+																	<label class="col-md-2 control-label">subject</label>
+																	<div class="col-md-10">
+																		<input class="form-control" style="margin-bottom: 5px" type="text" value="" name="subject" placeholder="subject for contact">
+																	</div>
+																</div>
+																<div class="form-group required">
+																	<label class="col-md-2 control-label">Message</label>
+																	<div class="col-md-10">
+																		<textarea class="form-control" style="margin-bottom: 15px" rows="10" name="message" placeholder="your message here..."></textarea>
+																	</div>
+																</div>
+																<div class="col-md-12">
+																	<div class="buttons">
+																		<div class="pull-right">
+																			<input class="btn btn-primary" style="margin-bottom: 200px" type="submit" value="Submit">
+																		</div>
+																	</div>
+																</div>
+															</form>
                         </div>
                     </div>
                 </div>
@@ -305,29 +116,29 @@
 													<div class="quick-image">
 														<div class="single-quick-image tab-content text-center">
 															<div class="tab-pane  fade in active" id="sin-pro-1">
-																<img src="img/quick-view/10.jpg" alt="" />
+																<img src="{% static 'images/quick-view/10.jpg' %}" alt="" />
 															</div>
 															<div class="tab-pane fade in" id="sin-pro-2">
-																<img src="img/quick-view/10.jpg" alt="" />
+																<img src="{% static 'images/quick-view/10.jpg' %}" alt="" />
 															</div>
 															<div class="tab-pane fade in" id="sin-pro-3">
-																<img src="img/quick-view/10.jpg" alt="" />
+																<img src="{% static 'images/quick-view/10.jpg' %}" alt="" />
 															</div>
 															<div class="tab-pane fade in" id="sin-pro-4">
-																<img src="img/quick-view/10.jpg" alt="" />
+																<img src="{% static 'images/quick-view/10.jpg' %}" alt="" />
 															</div>
 														</div>
 														<div class="quick-thumb">
 															<div class="nav nav-tabs">
 																<ul>
-																	<li><a data-toggle="tab" href="#sin-pro-1"> <img src="img/quick-view/10.jpg" alt="quick view" /> </a></li>
-																	<li><a data-toggle="tab" href="#sin-pro-2"> <img src="img/quick-view/10.jpg" alt="quick view" /> </a></li>
-																	<li><a data-toggle="tab" href="#sin-pro-3"> <img src="img/quick-view/10.jpg" alt="quick view" /> </a></li>
-																	<li><a data-toggle="tab" href="#sin-pro-4"> <img src="img/quick-view/10.jpg" alt="quick view" /> </a></li>
+																	<li><a data-toggle="tab" href="#sin-pro-1"> <img src="{% static 'images/quick-view/10.jpg' %}" alt="quick view" /> </a></li>
+																	<li><a data-toggle="tab" href="#sin-pro-2"> <img src="{% static 'images/quick-view/10.jpg' %}" alt="quick view" /> </a></li>
+																	<li><a data-toggle="tab" href="#sin-pro-3"> <img src="{% static 'images/quick-view/10.jpg' %}" alt="quick view" /> </a></li>
+																	<li><a data-toggle="tab" href="#sin-pro-4"> <img src="{% static 'images/quick-view/10.jpg' %}" alt="quick view" /> </a></li>
 																</ul>
 															</div>
 														</div>
-													</div>							
+													</div>
 												</div>
 												<div class="col-xs-12 col-sm-7">
 													<div class="quick-right">
@@ -427,29 +238,29 @@
 													<div class="quick-image">
 														<div class="single-quick-image tab-content text-center">
 															<div class="tab-pane  fade in active" id="sin-pro-5">
-																<img src="img/quick-view/10.jpg" alt="" />
+																<img src="{% static 'images/quick-view/10.jpg' %}" alt="" />
 															</div>
 															<div class="tab-pane fade in" id="sin-pro-6">
-																<img src="img/quick-view/10.jpg" alt="" />
+																<img src="{% static 'images/quick-view/10.jpg' %}" alt="" />
 															</div>
 															<div class="tab-pane fade in" id="sin-pro-7">
-																<img src="img/quick-view/10.jpg" alt="" />
+																<img src="{% static 'images/quick-view/10.jpg' %}" alt="" />
 															</div>
 															<div class="tab-pane fade in" id="sin-pro-8">
-																<img src="img/quick-view/10.jpg" alt="" />
+																<img src="{% static 'images/quick-view/10.jpg' %}" alt="" />
 															</div>
 														</div>
 														<div class="quick-thumb">
 															<div class="nav nav-tabs">
 																<ul>
-																	<li><a data-toggle="tab" href="#sin-pro-5"> <img src="img/quick-view/10.jpg" alt="quick view" /> </a></li>
-																	<li><a data-toggle="tab" href="#sin-pro-6"> <img src="img/quick-view/10.jpg" alt="quick view" /> </a></li>
-																	<li><a data-toggle="tab" href="#sin-pro-7"> <img src="img/quick-view/10.jpg" alt="quick view" /> </a></li>
-																	<li><a data-toggle="tab" href="#sin-pro-8"> <img src="img/quick-view/10.jpg" alt="quick view" /> </a></li>
+																	<li><a data-toggle="tab" href="#sin-pro-5"> <img src="{% static 'images/quick-view/10.jpg' %}" alt="quick view" /> </a></li>
+																	<li><a data-toggle="tab" href="#sin-pro-6"> <img src="{% static 'images/quick-view/10.jpg' %}" alt="quick view" /> </a></li>
+																	<li><a data-toggle="tab" href="#sin-pro-7"> <img src="{% static 'images/quick-view/10.jpg' %}" alt="quick view" /> </a></li>
+																	<li><a data-toggle="tab" href="#sin-pro-8"> <img src="{% static 'images/quick-view/10.jpg' %}" alt="quick view" /> </a></li>
 																</ul>
 															</div>
 														</div>
-													</div>							
+													</div>
 												</div>
 												<div class="col-xs-12 col-sm-7">
 													<div class="quick-right">
@@ -550,42 +361,42 @@
 							<div id="brand-logo" class="re-owl-carousel21 owl-carousel product-slider owl-theme">
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="img/brand/1.png" alt="" /></a>
+										<a href="#"><img src="{% static 'images/brand/1.png' %}" alt="" /></a>
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="img/brand/2.png" alt="" /></a>
+										<a href="#"><img src="{% static 'images/brand/2.png' %}" alt="" /></a>
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="img/brand/3.png" alt="" /></a>
+										<a href="#"><img src="{% static 'images/brand/3.png' %}" alt="" /></a>
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="img/brand/4.png" alt="" /></a>
+										<a href="#"><img src="{% static 'images/brand/4.png' %}" alt="" /></a>
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="img/brand/5.png" alt="" /></a>
+										<a href="#"><img src="{% static 'images/brand/5.png' %}" alt="" /></a>
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="img/brand/6.png" alt="" /></a>
+										<a href="#"><img src="{% static 'images/brand/6.png' %}" alt="" /></a>
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="img/brand/1.png" alt="" /></a>
+										<a href="#"><img src="{% static 'images/brand/1.png' %}" alt="" /></a>
 									</div>
 								</div>
 								<div class="col-xs-12">
 									<div class="single-brand">
-										<a href="#"><img src="img/brand/3.png" alt="" /></a>
+										<a href="#"><img src="{% static 'images/brand/3.png' %}" alt="" /></a>
 									</div>
 								</div>
 							</div>
@@ -626,189 +437,4 @@
 			</div>
        </section>
        <!-- service section end -->
-        <!-- footer section start -->
-		<footer class="re-footer-section">
-			<!-- footer-top area start -->
-			<div class="footer-top section-padding-top">
-				<div class="footer-dsc">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-12 col-sm-4 col-md-3">
-								<div class="single-text res-text">
-									<div class="footer-title">
-										<h4>Contact us</h4>
-										<hr class="dubble-border"/>
-									</div>
-									<div class="footer-text">
-										<ul>
-											<li>
-												<i class="pe-7s-map-marker"></i>
-												<p>My Company, 45 Puffin Street 1245</p>
-												<p class="rs">Poffinville France.</p>
-											</li>
-											<li>
-												<i class="pe-7s-call"></i>
-												<p>+201 (987) 6641 053</p>
-												<p>+202 (987) 6641 056</p>
-											</li>
-											<li>
-												<i class="pe-7s-mail-open"></i>
-												<p>info@domainname.com</p>
-												<p>company@outlook.com</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-4 col-md-3">
-								<div class="single-text res-text">
-									<div class="footer-title">
-										<h4>my account</h4>
-										<hr class="dubble-border"/>
-									</div>
-									<div class="footer-menu">
-										<ul>
-											<li><a href="login.html">My Account</a></li>
-											<li><a href="wishlist.html">My Wishlist</a></li>
-											<li><a href="order-complete">My Orders</a></li>
-											<li><a href="#">My Credit slips</a></li>
-											<li class="nm"><a href="#">My Addresses</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-4 col-md-3 margin-top">
-								<div class="single-text res-text">
-									<div class="footer-title">
-										<h4>customer service</h4>
-										<hr class="dubble-border"/>
-									</div>
-									<div class="footer-menu">
-										<ul>
-											<li><a href="contact.html">Contact Us</a></li>
-											<li><a href="#">Returns</a></li>
-											<li><a href="#">Brands</a></li>
-											<li><a href="#">Site Map</a></li>
-											<li class="nm"><a href="#">Gift Vouchers</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-12 hidden-sm col-md-3 margin-top">
-								<div class="single-text res-text">
-									<div class="footer-title">
-										<h4>NEWSLETTER</h4>
-										<hr class="dubble-border"/>
-									</div>
-									<div class="footer-text">
-										<p>Lorem ipsum dolor sit amet, consectetures do adipisicing elit, sed do eiusmod tempores incididunt ut labore</p>
-										<form action="mail.php" method="post">
-											<input type="text" name="email" placeholder="Enter your mail" />
-											<input type="submit" value="submit" />
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<hr class="dubble-border"/>
-				</div>
-				<div class="social-media">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-12 col-sm-6">
-								<div class="paypal social-icon">
-									<ul>
-										<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
-										<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
-										<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
-										<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
-										<li><a href="#"><i class="fa fa-cc-stripe"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<div class="social-icon">
-									<ul class="floatright">
-										<li class="res-mar"><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-										<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-										<li><a href="#"><i class="fa fa-soundcloud"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- footer-top area end -->
-			<!-- footer-bottom area start -->
-			<div class="footer-bottom">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 text-center">
-							<p>©Copyright, 2018 All Rights Reserved by <a href="https://freethemescloud.com/">Free themes Cloud</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- footer-bottom area end -->
-		</footer>
-        <!-- footer section end -->
-        
-		<!-- all js here -->
-		<!-- jquery latest version -->
-        <script src="js/vendor/jquery-1.12.0.min.js"></script>
-		<!-- bootstrap js -->
-        <script src="js/bootstrap.min.js"></script>
-        <!-- parallax js -->
-        <script src="js/parallax.min.js"></script>
-		<!-- owl.carousel js -->
-        <script src="js/owl.carousel.min.js"></script>
-        <!-- Img Zoom js -->
-		<script src="js/img-zoom/jquery.simpleLens.min.js"></script>
-		<!-- meanmenu js -->
-        <script src="js/jquery.meanmenu.js"></script>
-		<!-- jquery.countdown js -->
-        <script src="js/jquery.countdown.min.js"></script>
-		<!-- Nivo slider js
-		============================================ --> 		
-		<script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
-		<script src="lib/home.js" type="text/javascript"></script>
-		<!-- jquery-ui js -->
-        <script src="js/jquery-ui.min.js"></script>
-		<!-- sticky js -->
-        <script src="js/sticky.js"></script>
-		<!-- plugins js -->
-        <script src="js/plugins.js"></script>
-        <!-- google map api
-		============================================ -->
-        <script src="http://maps.googleapis.com/maps/api/js"></script>
-         <script>
-            var myCenter=new google.maps.LatLng(23.763523, 90.431098);
-            function initialize()
-            {
-                var mapProp = {
-                  center:myCenter,
-                  scrollwheel: false,
-                  zoom:17,
-                  mapTypeId:google.maps.MapTypeId.ROADMAP
-                  };
-                var map=new google.maps.Map(document.getElementById("hastech"),mapProp);
-                var marker=new google.maps.Marker({
-                  position:myCenter,
-                    animation:google.maps.Animation.BOUNCE,
-                  icon:'img/map-marker.png',
-                    map: map,
-                  });
-
-                marker.setMap(map);
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
-		<!-- main js -->
-        <script src="js/main.js"></script>
-    </body>
-</html>
+	   {% endblock  %}
