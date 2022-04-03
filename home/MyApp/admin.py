@@ -1,5 +1,5 @@
 from django.contrib import admin
-from MyApp.models import Contact
+from .models import Contact
 
 
 
@@ -9,5 +9,6 @@ admin.site.site_title = 'Apparel Shop'
 
 # Register your models here.
 admin.site.register(Contact)
+
 
 

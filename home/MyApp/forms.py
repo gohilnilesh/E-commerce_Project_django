@@ -1,11 +1,10 @@
 from django import forms
-from .models import Contact
+from .models import *
 
-# class ContactForm(forms.ModelForm):
+class ContactForm(forms.ModelForm):
 
-#     class Meta:
-#         model = Contact
-#         fields = [
-#            "title",
-#            "description",
-#         ]
+    class Meta:
+        model = Contact
+        fields = "__all__"
+
+

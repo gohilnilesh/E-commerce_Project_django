@@ -24,7 +24,7 @@
                     <div class="col-md-push-3 col-xs-6">
                         <div class="tb-login-form ">
                             <h5 class="tb-title">Login</h5>
-                            
+
                             <form id="login_form" class="login" method="post" action="{% url 'account_login' %}"> {% csrf_token %}
                                 <p class="checkout-coupon top log a-an">
                                     <label class="l-contact">
@@ -59,4 +59,53 @@
                 </div>
             </div>
         </div>
+        <script>
+            $('#login_form').validate({
+                rules : {
+                    login: "required",
+                    password: "required",
+                },
+                messages: {
+                    login: 'Please enter your username',
+                    password: 'Please enter your password',
+                }
+            });
+            $("form").submit(function (event) {
+                event.preventDefault();
+                var form = $(this);
+                $.ajax({
+                        url: form.attr("data-validate-username-url"),
+                        data: form.serialize(),
+                        type: 'post',
+                        context: form,
+                        dataType: 'json',
+                        success: function(data) {
+                            if(data.content) {
+                                console.log(data);
+                                if (data.is_taken) {
+                                    console.log(data);
+                                    if (!data.user) {
+                                        swal({'title': 'Invalid Password', 'text': data.error_message, icon: "warning"});
+                                    } else {
+                                        this.off('submit');
+                                        this.submit();
+                                    }
+                                } else {
+                                    console.log(data);
+                                    swal({'title': 'Invalid Details', 'text': data.error_message, icon: "warning"});
+                                }
+                            }
+                        else{
+                            console.log(data);
+                            }
+                        }
+                });
+            });
+
+
+        <script src="{% static 'js/vendor/jquery.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'js/sweetalert.min.js' %}"></script>
+        </script>
         {% endblock %}

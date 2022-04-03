@@ -1,25 +1,42 @@
 from django.shortcuts import render
-
-#for forms
-from .models import Contact
+from twilio.rest import Client
 from .forms import ContactForm
+from home import settings
 
 
+# msg = 'MESSAGE HERE'
+# account_sid = '*'
+# auth_token = '*',
+# client = Client(account_sid,auth_token)
+# message = client.messages.create(
+#     body = msg
+#     # from = 'number',
+#     # to = '+ 91 je ma moklavu 6 ema',
+# )
 
-# Create your views here.
-#for Form
-# def create_view(request):
-#     context = {}
-
-#     form = ContactForm(request.POST or None)
-#     if form.is_valid():
-#         form.save()
-
-#         context['form'] = form
-
-#         return render(request, 'new_contact.html',context)
-
-
+def contact(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST or None)
+        if form.is_valid():
+            contact_name = form.cleaned_data['name']
+            contact_email = form.cleaned_data['email']
+            sub = form.cleaned_data['subject']
+            content = form.cleaned_data['message']
+            # print(contact_name)
+            form.save()
+            subject = 'Hello ' + contact_name + ' from apparel!'
+            message = 'Stay Connected. We would love to hear you!'
+            email_from = settings.EMAIL_HOST_1USER
+            email_to = [contact_email, ]
+            send_mail(subject, message, email_from, email_to)
+            messages.success(request, 'Form submitted successfully.')
+            return redirect('Home:Home')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = ContactForm()
+    template = 'contact.html'
+    return render(request, template, {'form': form})
 
 
 
@@ -57,5 +74,3 @@ def wishlist(request):
 def my_account(request):
     return render(request, 'my-account.html')
 
-def new_contact(request):
-    return render(request,'new_contact.html')
