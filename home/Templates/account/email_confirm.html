@@ -21,7 +21,7 @@
 
     {% user_display confirmation.email_address.user as user_display %}
     <center style="margin-bottom: 100px;margin-top: 100px">
-    <p> <h4>with confirmation.email_address.email as email Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user {{ user_display }}</h4>.</p>
+    <p> <h4> You Successfully Create account <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for username As a  {{ user_display }}</h4>.</p>
 
     <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
     {% csrf_token %}
