@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.contrib.auth.forms import UserCreationForm
 
 
 #path
@@ -36,14 +35,4 @@ def wishlist(request):
 def my_account(request):
     return render(request, 'my-account.html')
 
-def sign_up(request):
-
-    if request.method == "POST":
-        fm = UserCreationForm(request.POST)
-    if fm.is_valid():
-        fm.save()
-       
-    else:
-      fm = UserCreationForm()
-    return render(request,'signup.html',{'form':fm})
 
